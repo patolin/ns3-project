@@ -12,3 +12,5 @@ Also the scratch folder includes
 - Simulation with VNLayer-IBR-SCMA
 - Simulation with VNLayer VNAODV-AODV
 - Simulation with single node download
+
+Tested with NS3 3.26 and SUMO 0.22
