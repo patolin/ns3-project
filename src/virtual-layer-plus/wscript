@@ -1,0 +1,24 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('virtual-layer-plus', ['internet', 'network', 'wave', 'wifi', 'mobility', 'core'])
+    module.includes = '.'
+    module.source = [
+        'model/virtual-layer-plus-net-device.cc',
+        'model/virtual-layer-plus-header.cc',
+        'model/virtual-layer-plus-payload-header.cc',
+        'model/backup-table-header.cc',
+        'model/routing-table-header.cc',
+        'helper/virtual-layer-plus-helper.cc'
+        ]
+
+    headers = bld(features=['ns3header'])
+    headers.module = 'virtual-layer-plus'
+    headers.source = [
+        'model/virtual-layer-plus-net-device.h',
+        'model/virtual-layer-plus-header.h',
+        'model/virtual-layer-plus-payload-header.h',
+        'model/backup-table-header.h',
+        'model/routing-table-header.h',
+        'helper/virtual-layer-plus-helper.h'
+        ]

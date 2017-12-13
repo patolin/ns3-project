@@ -1,0 +1,16 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('scma-statemachine', ['internet', 'network', 'wave', 'wifi', 'mobility', 'core'])
+    module.includes = '.'
+    module.source = [
+        'model/scma-statemachine.cc',
+        'model/scma-message-header.cc'
+        ]
+
+    headers = bld(features=['ns3header'])
+    headers.module = 'scma-statemachine'
+    headers.source = [
+        'model/scma-statemachine.h',
+        'model/scma-message-header.h'
+        ]

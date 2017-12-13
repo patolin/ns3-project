@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netgenerateConfiguration.xsd">
+   <grid_network>
+       <grid value="1"/>
+       <grid.x-number value="8"/>
+       <grid.y-number value="8"/>
+       <grid.x-length value="160.4"/>
+       <grid.y-length value="160.4"/>
+   </grid_network>
+   <output>
+       <output-file value="netfile.net.xml"/>
+   </output>
+   <processing>
+       <no-turnarounds value="true"/>
+       <offset.x value="20.05"/>
+       <offset.y value="20.05"/>
+       <offset.disable-normalization value="true"/>
+   </processing>
+   <building_defaults>
+     <default.speed value="2.77777777778"/>
+     <default.lanenumber value="1"/>
+     <default.sidewalk-width value="10.1"/>
+   </building_defaults>
+</configuration>
